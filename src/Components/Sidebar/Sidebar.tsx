@@ -5,7 +5,6 @@ import SidebarMenu from './SidebarMenu';
 type SibebarProps = {
   isOpen: boolean;
   project?: Project;
-  // toggleSidebar: (project?: Project | undefined) => void
 };
 
 const Sidebar = forwardRef<HTMLDivElement, SibebarProps>(({ isOpen, project }, ref) => {
