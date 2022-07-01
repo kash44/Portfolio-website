@@ -1,4 +1,5 @@
 import { Project, projects } from "../../ProjectData";
+import Headers from "../Headers/Headers";
 
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 const Projects = ({ toggleSidebar, setSelectedProject }: Props) => {
   return (
     <div className="container flex flex-col px-5 mx-auto mt-20 md:mt-36 md:h-screen xl:max-w-screen-lg">
-      <h1 className="mb-10 text-5xl font-bold text-white">Projects</h1>
+      <Headers>Projects</Headers>
       <section className="grid mt-8 gap-x-3 gap-y-10 md:grid-cols-3">
         {projects.map((project) => (
           <div

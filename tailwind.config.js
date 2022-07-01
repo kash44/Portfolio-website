@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         royalBlue: "#15cdfc",
         chineseSilver: "#cccccc",
+        deepBlue: "#0f172a",
       },
       backgroundColor: {
         "royal-blue": "#15cdfc",

@@ -24,8 +24,8 @@ const Sidebar = forwardRef<HTMLDivElement, SibebarProps>(({ isOpen, project }, r
           (isOpen ? " translate-x-0" : " translate-x-full")
         }
       >
-        {/* { project?.title ? <h2 className="text-2xl text-white">{project.title}</h2> : <SidebarMenu /> } */}
-        { project ? <SidebarMenu /> : <SidebarMenu /> }
+        { project?.title ? <h2 className="text-2xl text-white">{project.title}</h2> : <SidebarMenu /> }
+        {/* { project ? <SidebarMenu /> : <SidebarMenu /> } */}
       </div>
     </>
   );

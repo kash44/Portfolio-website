@@ -10,9 +10,9 @@ type Props = {
 
 const Navbar = forwardRef<HTMLButtonElement, Props>(({ toggleSidebar, showSidebar, setSelectedProject }, hamburgerRef) => {
   return (
-    <nav className="container sticky top-0 mx-auto bg-deep-blue xl:max-w-screen-lg">
+    <nav className="container sticky top-0 z-30 mx-auto bg-deep-blue xl:max-w-screen-lg">
       <div className="z-30 mx-auto flex h-16 max-w-[1240px] items-center justify-between justify-items-center px-4 text-white">
-        <h1 className="z-[100] text-3xl font-bold">KASH.</h1>
+        <h1 className="text-3xl font-bold ">KASH.</h1>
         <ul className="items-center hidden md:flex">
           <li className="px-10 text-xl transition ease-in-out cursor-pointer hover:text-royalBlue active:text-royalBlue hover:ease-in-out hover:scale-150">
             Home

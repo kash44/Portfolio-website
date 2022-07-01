@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import useInput from "../../hooks/useInput";
+import Headers from "../Headers/Headers";
 
 type Props = {};
 
@@ -59,7 +60,7 @@ const Contact = (props: Props) => {
   return (
     <div className="container flex px-5 mx-auto mt-20 md:h-screen md:mt-36 xl:max-w-screen-lg">
       <div className="flex flex-col w-full text-white">
-        <h1 className="mb-6 text-5xl font-bold">Contact</h1>
+        <Headers>CONTACT</Headers>
         <form className="text-black" ref={form} onSubmit={sendEmail} action="">
           <div className={`mb-4`}>
             <label className="text-white" htmlFor="">

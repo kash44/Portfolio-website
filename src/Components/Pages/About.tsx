@@ -1,4 +1,5 @@
 import Cube from "../CubeAnimation/Cube";
+import Headers from '../Headers/Headers';
 
 type Props = {};
 
@@ -7,7 +8,7 @@ const About = (props: Props) => {
     <div className="container flex px-5 mx-auto mt-20 md:h-screen md:mt-36 xl:max-w-screen-lg">
       <div className="flex flex-col mx-auto md:flex-row md:gap-10">
         <div className="mb-20 text-white md:w-3/5">
-          <h1 className="mb-10 text-5xl font-bold">ABOUT</h1>
+          <Headers>ABOUT</Headers>
           <p>
             Hello! My name is Kash Adesina, I'm a Full-Stack Developer with a
             passion for technology. I would describe myself as someone who is
