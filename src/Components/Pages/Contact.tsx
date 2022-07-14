@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import useInput from "../../hooks/useInput";
 import Headers from "../Headers/Headers";
 
 type Props = {};
 
-const Contact = (props: Props) => {
+const Contact = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const form = useRef<HTMLFormElement>(null!);
 
   const {
@@ -58,7 +58,7 @@ const Contact = (props: Props) => {
   };
 
   return (
-    <div className="container flex px-5 mx-auto mt-20 md:h-screen md:mt-36 xl:max-w-screen-lg">
+    <div id="Contact" ref={ref} className="container flex px-5 mx-auto mt-20 md:h-screen md:mt-36 xl:max-w-screen-lg">
       <div className="flex flex-col w-full text-white">
         <Headers>CONTACT</Headers>
         <form className="text-black" ref={form} onSubmit={sendEmail} action="">
@@ -135,6 +135,6 @@ const Contact = (props: Props) => {
       </div>
     </div>
   );
-};
+});
 
 export default Contact;

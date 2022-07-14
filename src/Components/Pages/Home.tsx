@@ -1,11 +1,27 @@
 import BackgroundAnimation from "../BackgroundAnimation/BackgroundAnimation";
+import { Refs } from "../../types";
+import { forwardRef } from "react";
 
 type Props = {};
 
-const Home = (props: Props) => {
+const Home = forwardRef<Refs, Props>((props, ref) => {
+  const { aboutRef } = (ref as React.MutableRefObject<Refs>)?.current;
+
+  const handleClick = (
+    ref: React.MutableRefObject<HTMLDivElement | HTMLButtonElement>
+  ) => {
+    window.scrollTo({
+      top: ref.current.offsetTop - 100,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
-      <div className="container h-screen px-5 mx-auto mt-20 md:mt-36 xl:max-w-screen-lg">
+      <div
+        id="Home"
+        className="container h-screen px-5 mx-auto mt-20 md:mt-36 xl:max-w-screen-lg"
+      >
         <div className="flex gap-10 mx-auto">
           <div>
             <div className="text-white">
@@ -18,7 +34,10 @@ const Home = (props: Props) => {
                 Welcome to my portfolio website, a hub to showcase my projects,
                 but to also document my journey and growth as a developer
               </p>
-              <button className="rounded-full bg-sky-400 px-10 py-2 text-xl hover:bg-[#0E8FB0]">
+              <button
+                onClick={() => handleClick(aboutRef)}
+                className="rounded-full bg-sky-400 px-10 py-2 text-xl hover:bg-[#0E8FB0]"
+              >
                 Explore
               </button>
             </div>
@@ -30,6 +49,6 @@ const Home = (props: Props) => {
       </div>
     </>
   );
-};
+});
 
 export default Home;

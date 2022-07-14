@@ -17,9 +17,9 @@ export const projects: Array<Project> = [
   {
     title: "Portfolio website",
     description:
-      "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+      "A place to let you know more about myself and to showcase my completed projects. This website is a frontend Typescript + react project styled with tailwindcss. ",
     image: HomePage,
-    tags: ["Typescript", "Tailwind", "React", "Node"],
+    tags: ["Typescript", "TailwindCSS", "React", "React-hooks", "Frontend"],
     source: "https://google.com",
     visit: "https://google.com",
     id: 0,
@@ -27,9 +27,9 @@ export const projects: Array<Project> = [
   {
     title: "WeTour API",
     description:
-      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+      "A backend API for a touring website. Where users can sign up, login, change passwords and perform CRUD operations with server side authentication .",
     image: weTour,
-    tags: ["React", "JavaScript"],
+    tags: ["Node.js", "JavaScript", "MVC", "Backend"],
     source: "https://github.com/kash44/WeTour-API",
     visit: "https://github.com/kash44/WeTour-API",
     id: 1,
@@ -39,7 +39,7 @@ export const projects: Array<Project> = [
     description:
       "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
     image: eCommerce,
-    tags: ["React", "WebRTC", "Full-stack"],
+    tags: ["React", "Redux", "Full-stack", "Styled-components", "Typescript", "Nodejs"],
     source: "https://google.com",
     visit: "https://google.com",
     id: 2,
