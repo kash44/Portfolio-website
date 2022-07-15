@@ -24,7 +24,7 @@ const Sidebar = forwardRef<Refs, SibebarProps>(({ isOpen, project }, ref) => {
       <div
         ref={sidebarRef as React.MutableRefObject<HTMLDivElement>}
         className={
-          `fixed top-0 right-0 z-40 h-full w-[60vw] bg-black p-10 transition-transform duration-200 ease-in-out md:w-[30vw]` +
+          `fixed top-0 right-0 z-30 h-full w-[60vw] items-center justify-center bg-black p-10 transition-transform duration-200 ease-in-out md:w-[30vw]` +
           (isOpen ? " translate-x-0" : " translate-x-full")
         }
       >
@@ -49,11 +49,10 @@ const Sidebar = forwardRef<Refs, SibebarProps>(({ isOpen, project }, ref) => {
             </div>
           </div>
         ) : (
-          <SidebarMenu ref={ref} />
+          <div className="items-center justify-center w-full h-full">
+            <SidebarMenu ref={ref} />
+          </div>
         )}
-        {/* pass in title, image etc as props and the child component can use it  */}
-        {/* { project?.title ? <ProjectInfo currentProject={project} /> : <SidebarMenu /> } */}
-        {/* Pass the project.id in as a prop and if project.id == project.id then conditionally render at that iteration */}
       </div>
     </>
   );

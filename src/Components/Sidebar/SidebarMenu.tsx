@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { Refs } from "../../types";
 
-const SidebarMenu = forwardRef<Refs>(({}, ref) => {
+const SidebarMenu = forwardRef<Refs>((Props, ref) => {
   const { aboutRef, projectsRef, contactRef } = (
     ref as React.MutableRefObject<Refs>
   )?.current;
@@ -25,37 +25,39 @@ const SidebarMenu = forwardRef<Refs>(({}, ref) => {
   const hoverAfterClass = `hover:after:w-[120%] hover:after:outline-4 hover:after:outline hover:after:outline-black `;
 
   return (
-    <div className="mt-20 grid flex-col items-center justify-center overflow-hidden text-[32px] font-medium text-white md:text-6xl">
-      <ul>
-        <li
-          className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
-          data-name="Home"
-          onClick={backToTop}
-        >
-          Home
-        </li>
-        <li
-          className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
-          data-name="About"
-          onClick={() => handleClick(aboutRef)}
-        >
-          About
-        </li>
-        <li
-          className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
-          data-name="Projects"
-          onClick={() => handleClick(projectsRef)}
-        >
-          Projects
-        </li>
-        <li
-          className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
-          data-name="Contact"
-          onClick={() => handleClick(contactRef)}
-        >
-          Contact
-        </li>
-      </ul>
+    <div className="absolute mt-20 grid flex-col items-center justify-center overflow-hidden text-[32px] font-medium text-white md:text-6xl ">
+      <div className="items-center justify-center w-full h-full">
+        <ul className="flex flex-col">
+          <li
+            className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
+            data-name="Home"
+            onClick={backToTop}
+          >
+            Home
+          </li>
+          <li
+            className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
+            data-name="About"
+            onClick={() => handleClick(aboutRef)}
+          >
+            About
+          </li>
+          <li
+            className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
+            data-name="Projects"
+            onClick={() => handleClick(projectsRef)}
+          >
+            Projects
+          </li>
+          <li
+            className={`relative mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
+            data-name="Contact"
+            onClick={() => handleClick(contactRef)}
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
     </div>
   );
 });

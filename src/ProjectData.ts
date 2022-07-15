@@ -21,7 +21,7 @@ export const projects: Array<Project> = [
     image: HomePage,
     tags: ["Typescript", "TailwindCSS", "React", "React-hooks", "Frontend"],
     source: "https://google.com",
-    visit: "https://google.com",
+    visit: "https://github.com/kash44/Portfolio-website",
     id: 0,
   },
   {
