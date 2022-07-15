@@ -19,7 +19,7 @@ const Navbar = forwardRef<Refs, Props>(
       ref: React.MutableRefObject<HTMLDivElement | HTMLButtonElement>
     ) => {
       window.scrollTo({
-        top: ref.current.offsetTop - 100,
+        top: ref.current.offsetTop - 120,
         behavior: "smooth",
       });
     };

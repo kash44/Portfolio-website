@@ -9,7 +9,7 @@ const Headers = ({ children }: headerProps) => {
   const hoverAfterClass = `hover:after:w-[120%] hover:after:outline-4 hover:after:outline hover:after:outline-deepBlue `;
 
   return (
-    <div className="grid flex-col items-center mb-5 overflow-hidden text-6xl font-medium text-white md:mb-10">
+    <div className="grid flex-col items-center mb-5 overflow-hidden text-6xl font-medium text-white md:mb-4">
       <h1
         className={`relative md:mb-5 w-fit cursor-pointer uppercase transition-all duration-200 ease-in hover:skew-x-[10deg] ${beforeClass} ${afterClass} ${hoverBeforeClass} ${hoverAfterClass}`}
         data-name={children}
