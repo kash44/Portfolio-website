@@ -34,8 +34,8 @@ const About = forwardRef<HTMLDivElement, Props>((props, ref) => {
           </p>
           <br />
           <p>
-            As a Software Engineer my aim is to write clean, readable code. To
-            Create websites/web apps that provide value, have engaging frontends
+            As a Software Engineer my aim is to write clean, readable code.
+            Creating websites/web apps that provide value, have engaging frontends
             and performant backends while adhering to best practices. Welcome
             following me on this journey.
           </p>

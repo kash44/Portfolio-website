@@ -7,7 +7,6 @@ type Props = {
   setSelectedProject: React.Dispatch<React.SetStateAction<Project>>;
 };
 
-// forwardRef<HTMLDivElement, Props>((props, ref)
 const Projects = forwardRef<HTMLDivElement, Props>(({ toggleSidebar, setSelectedProject }, ref) => {
   return (
     <div ref={ref} id="Projects" className="container flex flex-col px-5 mx-auto mt-20 md:mt-36 md:h-screen xl:max-w-screen-lg">

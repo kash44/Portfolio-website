@@ -30,19 +30,19 @@ const Sidebar = forwardRef<Refs, SibebarProps>(({ isOpen, project }, ref) => {
       >
         {project?.title ? (
           <div className="h-full text-white">
-            <h1 className="text-2xl mb-14">{project.title}</h1>
+            <h1 className="text-lg sm:text-2xl mb-4 sm:mb-14">{project.title}</h1>
             <img
-              className="mb-10 rounded-lg"
+              className=" mb-4 md:mb-10 rounded-lg"
               src={project.image}
               alt={project.title}
             />
             <div>
-              <h2 className="text-lg">Description:</h2>
-              <p className="pt-4 text-lg">{project.description}</p>
+              <h2 className="text-md md:text-lg">Description:</h2>
+              <p className="pt-4 sm:text-sm md:text-lg">{project.description}</p>
             </div>
             <div className="flex flex-wrap items-center justify-center pt-6 ">
               {project.tags.map((tags) => (
-                <button className="items-center p-2 mb-3 ml-2 border-solid rounded-md place-items-center bg-royalBlue">
+                <button className=" grid-rows-2 items-center p-2 mb-3 ml-2 border-solid rounded-md place-items-center bg-royalBlue text-sm md:text-lg">
                   {tags}
                 </button>
               ))}

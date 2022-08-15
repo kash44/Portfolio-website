@@ -21,8 +21,15 @@ function App() {
   const aboutRef = useRef<HTMLDivElement>(null!);
   const projectsRef = useRef<HTMLDivElement>(null!);
   const contactRef = useRef<HTMLDivElement>(null!);
+
   const ref = useRef<Refs>({ aboutRef, projectsRef, contactRef, hamburgerRef });
-  const refSidebar = useRef<Refs>({ homeRef, aboutRef, projectsRef, contactRef, sidebarRef })
+  const refSidebar = useRef<Refs>({
+    homeRef,
+    aboutRef,
+    projectsRef,
+    contactRef,
+    sidebarRef,
+  });
 
   useEffect(() => {
     const handler = (event: MouseEvent) => {
@@ -52,7 +59,7 @@ function App() {
         toggleSidebar={toggleSidebar}
         setSelectedProject={setSelectedProject}
       />
-      <Home ref={ref}/>
+      <Home ref={ref} />
       <About ref={aboutRef} />
       <Projects
         ref={projectsRef}

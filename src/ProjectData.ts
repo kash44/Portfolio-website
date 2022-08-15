@@ -1,4 +1,3 @@
-// import * as eCom from './Assets/E-commerce1.png';
 const HomePage = require('./Assets/Homepage.png');
 const weTour = require('./Assets/Waterfall.jpeg');
 const eCommerce = require('./Assets/E-commerce1.png');
